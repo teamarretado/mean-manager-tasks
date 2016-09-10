@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 const systems = mongoose.model('System');
 
 class SystemController{
-  find(resquest, response){
+  find(request, response){
     systems
       .find({})     
       .then(datas => response.json(datas))
       .catch(err => response.status(500).json(err));    
   }
-  get(resquest, response){
+  get(request, response){
     systems
       .findById(request.params.id)
       .then(system => {
@@ -18,19 +18,19 @@ class SystemController{
       })
       .catch(err => response.status(500).json(err));
   }
-  create(resquest, response){
+  create(request, response){
     systems
-      .create(resquest.body)
+      .create(request.body)
       .then(system => response.json(system))
       .catch(err => response.status(500).json(err));
   }
-  update(resquest, response){
+  update(request, response){
     systems
-      .findByIdAndUpdate(resquest.params.id, resquest.body)
+      .findByIdAndUpdate(request.params.id, request.body)
       .then(system => response.json(system))
       .catch(err => response.status(500).json(err));
   }
-  delete(resquest, response){
+  delete(request, response){
     systems
       .remove({ _id: request.params.id })
       .then(foto => response.sendStatus(204))

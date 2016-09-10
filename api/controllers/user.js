@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 const users = mongoose.model('User');
 
 class UserController{
-  find(resquest, response){
+  find(request, response){
     users
       .find({})
-      .then(users => response.json(response))
+      .then(users => response.json(users))
       .catch(err => response.status(500).json(err));
   }
-  get(resquest, response){
+  get(request, response){
     users
       .findById(request.params.id)
       .then(user => {
@@ -18,19 +18,19 @@ class UserController{
       })
       .catch(err => response.status(500).json(err));
   }
-  create(resquest, response){
+  create(request, response){
     users
-      .create(resquest.body)
+      .create(request.body)
       .then(user => response.json(user))
       .catch(err => response.status(500).json(err));
   }
-  update(resquest, response){
+  update(request, response){
     users
-      .findByIdAndUpdate(resquest.params.id, resquest.body)
+      .findByIdAndUpdate(request.params.id, request.body)
       .then(user => response.json(user))
       .catch(err => response.status(500).json(err));
   }
-  delete(resquest, response){
+  delete(request, response){
     users
       .remove({ _id: request.params.id })
       .then(() => response.sendStatus(204))

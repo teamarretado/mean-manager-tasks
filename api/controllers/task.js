@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const tasks =  mongoose.model('Task')
 
 class TaskController{
-  find(resquest, response){
+  find(request, response){
     tasks
       .find({})
       .populate('requester')
@@ -10,7 +10,7 @@ class TaskController{
       .then(datas => response.json(datas))
       .catch(err => response.status(500).json(err)); 
   }
-  get(resquest, response){
+  get(request, response){
     tasks
       .findById(request.params.id)
       .populate('requester')
@@ -22,19 +22,19 @@ class TaskController{
       })
       .catch(err => response.status(500).json(err));
   }
-  create(resquest, response){
+  create(request, response){
     tasks
-      .create(resquest.body)
+      .create(request.body)
       .then(task => response.json(task))
       .catch(err => response.status(500).json(err));
   }
-  update(resquest, response){
+  update(request, response){
     tasks
-      .findByIdAndUpdate(resquest.params.id, resquest.body)
+      .findByIdAndUpdate(request.params.id, request.body)
       .then(task => response.json(task))
       .catch(err => response.status(500).json(err));
   }
-  delete(resquest, response){
+  delete(request, response){
     tasks
       .remove({ _id: request.params.id })
       .then(task => response.sendStatus(204))
