@@ -5,12 +5,16 @@ class SystemController{
   find(resquest, response){
     systems
       .find({})
+      .populate('requester')
+      .populate('responsibles')
       .then(datas => response.json(datas))
       .catch(err => response.status(500).json(err));    
   }
   get(resquest, response){
     systems
       .findById(request.params.id)
+      .populate('requester')
+      .populate('responsibles')
       .then(system => {
         if(!system) throw new Error('System not found');
 
