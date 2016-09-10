@@ -5,12 +5,16 @@ class TaskController{
   find(resquest, response){
     tasks
       .find({})
+      .populate('requester')
+      .populate('responsibles')
       .then(datas => response.json(datas))
       .catch(err => response.status(500).json(err)); 
   }
   get(resquest, response){
     tasks
       .findById(request.params.id)
+      .populate('requester')
+      .populate('responsibles')
       .then(task => {
         if(!task) throw new Error('Task not found');
 
