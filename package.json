@@ -1,0 +1,24 @@
+{
+  "name": "mean-manager-tasks",
+  "version": "1.0.0",
+  "description": "First project using MEAN stack to develop a Task Manager application in 3 hours.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamarretado/mean-manager-tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamarretado/mean-manager-tasks/issues"
+  },
+  "homepage": "https://github.com/teamarretado/mean-manager-tasks#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0"
+  }
+}
