@@ -1,5 +1,5 @@
 module.exports = (app) => {
-  const controller = app.controller.task;
+  const controller = app.controllers.task;
 
   app.route('/v1/tasks')
     .get(controller.find)

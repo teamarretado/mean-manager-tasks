@@ -1,5 +1,5 @@
 module.exports = (app) => {
-  const controller = app.controller.user;
+  const controller = app.controllers.user;
 
   app.route('/v1/users')
     .get(controller.find)
