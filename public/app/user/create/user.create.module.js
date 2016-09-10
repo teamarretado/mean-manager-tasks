@@ -4,8 +4,8 @@
     const Config = function($stateProvider){
         var UserCreateState = {
             name: 'user-create',
-            url: '',
-            templateUrl: '',
+            url: '/user/create',
+            templateUrl: './app/user/create/user.create.view.html',
             controller: 'UserCreateController',
             contorllerAs: 'vm'
         }
