@@ -1,0 +1,37 @@
+<table class="ui celled striped table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Roles</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in vm.users">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td ng-repeat="role in user.roles">{{role}}</td>
+            <td>
+                <button class="ui blue icon button">
+                    <i class="edit icon"></i>
+                </button>
+                <button class="ui negative icon button">
+                    <i class="erase icon"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+    <tfooter>
+        <tr><th colspan="4"></th>
+            <div class="ui right floated">
+                <div class="cleasing">
+                    <button class="ui positive icon button">
+                        <i class="add icon"></i>
+                        Add User
+                    </button>
+                </div>
+            </div>
+        </tr>
+    </tfooter>
+</table>
