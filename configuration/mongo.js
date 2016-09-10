@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let db = mongoose.connect('mongodb://localhost:27017/manager-tasks').connection;
+let db = mongoose.connect(process.env.MONGODB_URI).connection;
 
 db.on('connected', () => console.log('mongodb connected'));
 db.on('disconnected', () => console.log('mongodb disconnected'));
