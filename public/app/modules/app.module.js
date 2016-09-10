@@ -1,12 +1,10 @@
 (function(){
     'use strict';
 
-    angular.module('TaskManagerApp', 
+    angular.module('AppModules', 
     [
         'UserModule',
         'SystemModule',
-        'TaskModule',
-        'App3thPartyModule',
-        'AppCommonsModule'
+        'TaskModule'
     ]);
 })();

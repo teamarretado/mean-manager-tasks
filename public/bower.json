@@ -5,7 +5,7 @@
     "Rastelli <felipe-rastelli@hotmail.com>"
   ],
   "description": "System to create and manage tasks.",
-  "main": "app.module.js",
+  "main": "app.js",
   "keywords": [
     "task",
     "manager",

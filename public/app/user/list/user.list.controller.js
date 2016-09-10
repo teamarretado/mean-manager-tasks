@@ -1,12 +1,12 @@
 (function(){
     'user strict';
 
-    const UserListController = function($scope, httpMethodsService, users){
+    const UserListController = function($scope, users){
         var vm = this;
 
-        vm.users = [];
+        vm.users = users;
     };
 
-    UserListController.$inject = ['$scope', 'httpMethodsService', 'users'];
-    angular.module('UserModule').controller('UserListController', UserListController);
+    UserListController.$inject = ['$scope', 'users'];
+    angular.module('UserListModule').controller('UserListController', UserListController);
 })();

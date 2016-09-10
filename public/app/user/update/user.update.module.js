@@ -1,18 +1,18 @@
 (function(){
     'use strict';
 
-    const Config = function($stateProvider, $q, httpMethodsService){
-        var UserCreateState = {
-            name: 'user-update',
-            url: '',
-            templateUrl: '',
-            controller: 'UserUpdateController',
-            controllerAs: 'vm'
-        }
+    const Config = function($stateProvider){
+        // var UserCreateState = {
+        //     name: 'user-update',
+        //     url: '',
+        //     templateUrl: '',
+        //     controller: 'UserUpdateController',
+        //     controllerAs: 'vm'
+        // }
 
-        $stateProvider.state(UserCreateState);
+        // $stateProvider.state(UserCreateState);
     };
 
-    Config.$inject = ['$stateProvider', '$q', 'httpMethodsService'];
+    Config.$inject = ['$stateProvider'];
     angular.module('UserUpdateModule', []).config(Config);
 })();

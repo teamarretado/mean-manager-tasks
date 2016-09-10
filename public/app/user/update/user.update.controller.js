@@ -8,5 +8,5 @@
     };
 
     UserUpdateController.$inject = ['$scope', 'httpMethodsService'];
-    angular.module('UserModule').controller('UserUpdateController', UserUpdateController);
+    angular.module('UserUpdateModule').controller('UserUpdateController', UserUpdateController);
 })();

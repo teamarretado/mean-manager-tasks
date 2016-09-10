@@ -26,5 +26,5 @@
     };
 
     UserCreateController.$inject = ['$scope', 'httpMethodsService'];
-    angular.module('UserModule').controller('UserCreateController', UserCreateController);
+    angular.module('UserCreateModule').controller('UserCreateController', UserCreateController);
 })();

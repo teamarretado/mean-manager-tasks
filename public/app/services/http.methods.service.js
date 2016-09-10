@@ -2,11 +2,11 @@
     'use strict';
 
     const HttpMethodsService = function($resource){
-        serverEndPoint = 'http://localhost:????/';
+        var serverEndPoint = 'http://localhost:3030/';
 
         function Post(resourceUrl, model){
             var deferred = $q.defer();
-            var resource = $resource(resourceUrl, null, Config('POST'));
+            var resource = $resource(serverEndPoint.concat(resourceUrl), '', Config('POST'));
             var jsonModel = JSON.stringify(model);
 
             return resource.post(jsonModel).$promise;
@@ -14,7 +14,7 @@
 
         function Put(resourceUrl, model){
             var deferred = $q.defer();
-            var resource = $resource(resourceUrl, null, Config('PUT'));
+            var resource = $resource(serverEndPoint.concat(resourceUrl), '', Config('PUT'));
             var jsonModel = JSON.stringify(model);
 
             return resource.post(jsonModel).$promise;
@@ -22,14 +22,14 @@
 
         function Get(resourceUrl){
             var deferred = $q.defer();
-            var resource = $resource(resourceUrl, null, Config('GET'));
+            var resource = $resource(serverEndPoint.concat(resourceUrl), '', Config('GET'));
 
             return resource.post(jsonModel).$promise;
         }
 
         function Delete(resourceUrl, model){
             var deferred = $q.defer();
-            var resource = $resource(resourceUrl, null, Config('DELETE'));
+            var resource = $resource(serverEndPoint.concat(resourceUrl), '', Config('DELETE'));
             var jsonModel = JSON.stringify(model);
 
             return resource.post(jsonModel).$promise;
@@ -50,5 +50,5 @@
     };
 
     HttpMethodsService.$inject = ['$resource'];
-    angular.module('AppCommonsModule').service('httpMethodsService', HttpMethodsService)
+    angular.module('ServicesModule').service('httpMethodsService', HttpMethodsService)
 })();

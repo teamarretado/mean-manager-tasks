@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html ng-app="TaskManagerApp">
+<html>
     <head>
-        <link rel="stylesheet" href="./bower_components/semantic/dist/semantic.css">
+        <link rel="stylesheet" href="bower_components/semantic/dist/semantic.css">
     </head>
-    <body>
+    <body ng-app="TaskManagerApp">
         
         <ui-view></ui-view>
-        <a ui-sref="user-create" ui-sref-active="active">Hello</a>
+        <hr>
+        <a ui-sref="user-create" ui-sref-active="active">Register User</a>
+        <a ui-sref="user-list" ui-sref-active="active">List Users</a>
 
-        <script src="./bower_components/jquery/dist/jquery.js"></script>
-        <script src="./bower_components/angular/angular.js"></script>
-        <script src="./bower_components/semantic/dist/semantic.js"></script>
-        <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="./bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/semantic/dist/semantic.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
 
-        <script src="./app/modules/app.3th.party.js"></script>
-        <script src="./app/modules/app.commons.js"></script>
+        <script src="app/modules/app.3th.party.js"></script>
 
-        <script src="./app/services/http.methods.service.js"></script>
+        <script src="app/services/services.module.js"></script>
 
-        <script src="./app/user/user.module.js"></script>
-        <script src="./app/system/system.module.js"></script>
-        <script src="./app/task/task.module.js"></script>
+        <script src="app/modules/app.common.js"></script>
+
+        <script src="app/services/http.methods.service.js"></script>
         
-        <script src="./app/user/create/user.create.module.js"></script>
-        <script src="./app/user/create/user.user.create.controller.js"></script>
-        <script src="./app/user/list/user.list.module.js"></script>
-        <script src="./app/user/list/user.list.controller.js"></script>
-        <script src="./app/user/update/user.update.module.js"></script>
-        <script src="./app/user/update/user.update.controller.js"></script>
+        <script src="app/user/create/user.create.module.js"></script>
+        <script src="app/user/create/user.create.controller.js"></script>
+        <script src="app/user/list/user.list.module.js"></script>
+        <script src="app/user/list/user.list.controller.js"></script>
+        <script src="app/user/update/user.update.module.js"></script>
+        <script src="app/user/update/user.update.controller.js"></script>
 
-        <script src="./app/modules/app.module.js"></script>
+        <script src="app/user/user.module.js"></script>
+        <script src="app/system/system.module.js"></script>
+        <script src="app/task/task.module.js"></script>
 
+        <script src="app/modules/app.module.js"></script>
+        <script src="app/modules/app.js"></script>
     </body>
 </html>

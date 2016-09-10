@@ -5,7 +5,7 @@
         var UserCreateState = {
             name: 'user-create',
             url: '/user/create',
-            templateUrl: './app/user/create/user.create.view.html',
+            templateUrl: 'app/user/create/user.create.view.html',
             controller: 'UserCreateController',
             contorllerAs: 'vm'
         }
