@@ -16,9 +16,6 @@ class TaskController{
   delete(resquest, response){
 
   }
-  patch(resquest, response){
-
-  }
 }
 
 

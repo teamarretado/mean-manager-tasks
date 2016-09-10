@@ -8,6 +8,5 @@ module.exports = (app) => {
   app.route('/v1/systems/:id')
     .get(controller.get)
     .put(controller.update)
-    .patch(controller.patch)
     .delete(controller.delete);
 }

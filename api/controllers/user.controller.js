@@ -16,9 +16,6 @@ class UserController{
   delete(resquest, response){
 
   }
-  patch(resquest, response){
-
-  }
 }
 
 
