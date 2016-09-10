@@ -1,0 +1,30 @@
+{
+  "name": "Task Manager System",
+  "homepage": "https://github.com/teamarretado/mean-manager-tasks",
+  "authors": [
+    "Rastelli <felipe-rastelli@hotmail.com>"
+  ],
+  "description": "System to create and manage tasks.",
+  "main": "app.module.js",
+  "keywords": [
+    "task",
+    "manager",
+    "system"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular-resource": "^1.5.8",
+    "angular": "^1.5.8",
+    "ui": "^0.0.5",
+    "semantic": "^2.2.4"
+  }
+}
